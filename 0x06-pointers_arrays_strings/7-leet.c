@@ -1,16 +1,26 @@
 #include "main.h"
 
 /**
-*main - check the code for
-*Return: Always 0.
+*leet -> a leet function
+*@x: param x
+*Return: a string
 */
-int main(void)
+char *leet(char *x)
 {
-	char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
-	char *p;
+	int a = 0, b, l = 5;
+	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
+	char trw[5] = {'4', '3', '0', '7', '1'};
 
-	p = leet(s);
-	printf("%s", p);
-	printf("%s", s);
-	return (0);
+	while (x[a])
+	{
+		b = 0;
+		while (b < l)
+		{
+			if (x[a] == tr[b] || x[a] - 32 == tr[b])
+				x[a] = trw[b];
+			b++;
+		}
+		a++;
+	}
+	return (x);
 }
