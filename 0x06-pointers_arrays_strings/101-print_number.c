@@ -1,33 +1,35 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-*main - Entry point
-*Return: Always 0 (Success/correct)
+*print_number - prints an integer.
+*@n: input integer.
+*Return: no return.
 */
-int main(void)
+void print_number(int n)
 {
-	int i, j, k;
+	unsigned int m, d, count;
 
-	for (i = 48; i < 58; i++)
+	if (n < 0)
 	{
-		for (j = 49; j < 58; j++)
-		{
-			for (k = 50; k < 58; k++)
-			{
-				if (k > j && j > i)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (i != 55 || j != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
-		}
+		_putchar(45);
+		m = n * -1;
 	}
-	putchar('\n');
-	return (0);
+	else
+	{
+		m = n;
+	}
+
+	d = m;
+	count = 1;
+
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
+
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) + 48);
+	}
 }
