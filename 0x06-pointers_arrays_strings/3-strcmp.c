@@ -1,18 +1,17 @@
 #include "main.h"
+#include <string.h>
 
 /**
-*main - check the code
-*Return: Always 0.
+*_strcmp -> for comparing purpose
+*@s1: param1
+*@s2: param2
+*Return: integer
 */
 
-int main(void)
+int _strcmp(char *s1, char *s2)
 {
-	char s1[] = "Hello";
-	char s2[] = "World!";
+	int result;
 
-	printf("%d\n", _strcmp(s1, s2));
-	printf("%d\n", _strcmp(s2, s1));
-	printf("%d\n", _strcmp(s1, s1));
-
-	return (0);
+	result = strcmp(s1, s2);
+	return (result);
 }
