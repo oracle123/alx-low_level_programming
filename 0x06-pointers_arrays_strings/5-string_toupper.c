@@ -1,17 +1,19 @@
 #include "main.h"
 
 /**
-*main - check the code
-*Return: Always 0.
+*string_toupper -> converting any string to upper case
+*@x: string param
+*Return: string
 */
-
-int main(void)
+char *string_toupper(char *x)
 {
-	char str[] = "Look up!\n";
-	char *ptr;
+	int i = 0;
 
-	ptr = string_toupper(str);
-	printf("%s", ptr);
-	printf("%s", str);
-	return (0);
+	while (x[i])
+	{
+		if (x[i] >= 97 && x[i] <= 122)
+			x[i] = x[i] - 32;
+		i++;
+	}
+	return (x);
 }
