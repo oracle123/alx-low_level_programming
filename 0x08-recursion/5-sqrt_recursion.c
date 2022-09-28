@@ -12,7 +12,6 @@ int _evaluate(int i, int n)
 	/*Evaluate function*/
 	if (n == 0 || n == 1)
 		return (n);
-
 	else if (i * i < n)
 		return (_evaluate(i + 1, n));
 
@@ -25,10 +24,10 @@ int _evaluate(int i, int n)
 }
 
 /**
- *  *_sqrt_recursion - evaluate sqrt
- *   *@n: interger
- *    *Return: Sgrt_recursion
- *    */
+*_sqrt_recursion - evaluate sqrt
+*@n: interger
+*Return: Sgrt_recursion
+*/
 
 int _sqrt_recursion(int n)
 {
