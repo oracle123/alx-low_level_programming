@@ -4,6 +4,7 @@
 /**
 *new_dog - creates a new dog
 *@name: 1st member.
+*@age: 2nd member
 *@owner: 3rd member
 *Return: NULL if fail.
 */
@@ -16,7 +17,6 @@ struct dog *n_dog = NULL;
 
 lenN = 0;
 while (name[lenN] != '\0')
-
 lenN++;
 lenO = 0;
 while (owner[lenO] != '\0')
